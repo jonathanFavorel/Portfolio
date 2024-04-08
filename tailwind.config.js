@@ -2,6 +2,25 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontSize: {
+      sm: "0.8rem",
+      base: "1rem",
+      xl: "1.25rem",
+      DEFAULT: "0.9375rem",
+      "2xl": "1.563rem",
+      "3xl": "1.953rem",
+      "4xl": "2.441rem",
+      "5xl": "3.052rem",
+    },
+    borderRadius: {
+      none: "0",
+      sm: "0.125rem",
+      DEFAULT: "8px",
+      md: "0.375rem",
+      lg: "0.5rem",
+      full: "9999px",
+      large: "12px",
+    },
     extend: {
       colors: {
         green: "#7EB942",
