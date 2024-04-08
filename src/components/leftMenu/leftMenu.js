@@ -45,12 +45,12 @@ const LeftMenu = () => {
   }, []);
 
   return (
-    <div className="overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 scroll-container">
+    <div className="overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 scroll-container ">
       <button
         onClick={toggleSidebar}
         aria-controls="default-sidebar"
         type="button"
-        className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        className="inline-flex items-center p-2 mt-2 mr-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 absolute right-0"
       >
         <svg
           className={`w-6 h-6 ${
@@ -72,11 +72,11 @@ const LeftMenu = () => {
       <aside
         id="default-sidebar"
         ref={sidebarRef}
-        className={`fixed top-0 left-0 z-40 w-96 h-screen transition-transform ${
-          sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } sm:translate-x-0 bg-gray-900`}
+        className={`fixed top-0 left-0 z-40 w-full sm:w-96 h-screen transition-transform bg-white1 ${
+          sidebarOpen ? "translate-y-0" : "-translate-y-full"
+        } sm:translate-y-0 bg-gray`}
       >
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <div className="h-full px-3 py-4 overflow-y-auto bg-gray dark:bg-gray-800">
           <button
             onClick={toggleSidebar}
             className="absolute top-3 right-3 text-white hover:text-gray-300 focus:outline-none sm:hidden"
@@ -270,7 +270,7 @@ const LeftMenu = () => {
                 href="chemin_vers_votre_cv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-yellow hover:bg-yellow1 text-white font-bold py-2 px-4 rounded flex items-center"
+                className="bg-yellow hover:bg-yellow1 text-white font-bold py-2 px-4 rounded flex items-center sm: mb-20"
               >
                 CV <img className="w-15 h-15 mt-1 ml-2" src={Download} alt="" />
               </a>
