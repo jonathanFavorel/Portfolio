@@ -1,0 +1,15 @@
+.logo {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}

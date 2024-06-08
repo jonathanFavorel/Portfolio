@@ -24,6 +24,14 @@
   color: white;
 }
 
+.no-horizontal-scroll {
+  overflow-x: hidden;
+}
+
+.no-vertical-scroll {
+  overflow-y: hidden;
+}
+
 .App-link {
   color: #61dafb;
 }
