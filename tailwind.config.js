@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "selector",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontSize: {
@@ -20,6 +21,7 @@ module.exports = {
       lg: "0.5rem",
       full: "9999px",
       large: "12px",
+      large1: "40px",
     },
     extend: {
       colors: {
@@ -30,6 +32,8 @@ module.exports = {
         yellow: "#FFB400",
         yellow1: "#DF9E00",
         black: "#2B2B2B",
+        blackdark: "#1c1c1c",
+        blackbg: "#131313",
         background: "#F0F0F6",
       },
       fontFamily: {
@@ -46,5 +50,12 @@ module.exports = {
       },
     },
   },
+
   plugins: [],
+  variants: {
+    extend: {
+      // Activer les animations pour les variantes "hover", "focus", etc.
+      animation: ["responsive", "motion-safe", "motion-reduce"],
+    },
+  },
 };

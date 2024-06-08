@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { ReactComponent as ContactIcon } from "./src/Contact.svg";
+import React, { useEffect, useState } from "react";
 import { ReactComponent as FormationIcon } from "./src/Formation.svg";
 import { ReactComponent as HomeIcon } from "./src/Home.svg";
 import { ReactComponent as ProjetIcon } from "./src/Projet.svg";
@@ -8,74 +7,160 @@ import { ReactComponent as ThemeIcon } from "./src/Theme.svg";
 import { ReactComponent as WorkIcon } from "./src/Work.svg";
 
 const VerticalNavbar = () => {
-  const [activeIcon, setActiveIcon] = useState("home");
-
-  const handleClick = (icon) => {
-    if (activeIcon === icon) {
-      setActiveIcon("");
-    } else {
-      setActiveIcon(icon);
+  const smoothScroll = (targetId) => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
+  const [isDarkMode, setIsDarkMode] = useState(
+    localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+  );
+
+  const toggleTheme = () => {
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+  };
+
+  const [activeIcon, setActiveIcon] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveIcon(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleScroll, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    });
+
+    const sections = [
+      "home",
+      "formation",
+      "work",
+      "recommandation",
+      "projet",
+      "contact",
+    ];
+
+    sections.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      sections.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDarkMode]);
+
+  const getIconClass = (iconId) =>
+    `relative h-10 w-10 mx-auto mb-8 ${
+      activeIcon === iconId
+        ? "bg-yellow rounded-full transition-all duration-300"
+        : ""
+    }`;
+
+  const iconFillColor = isDarkMode ? "#FFFFFF" : "#2B2B2B";
+
   return (
-    <nav className="fixed right-0 sm:flex flex-col justify-between h-screen bg-white1 text-white w-36">
-      <div className="pt-4">
-        <ThemeIcon className="h-14 mx-auto mb-2" fill="#2B2B2B" />
-      </div>
+    <nav
+      className={`bg-white1 fixed right-0 flex-col justify-between h-screen text-white w-36 dark:bg-blackdark hidden sm:flex`}
+    >
       <div className="flex flex-col items-center justify-center flex-grow">
-        <div
-          className={`relative h-10 w-10 mx-auto mb-8 ${
-            activeIcon === "home" ? "bg-yellow rounded-full" : ""
-          } transition-all duration-300`}
-          onClick={() => handleClick("home")}
-        >
-          <HomeIcon className="h-10 mx-auto mb-8" fill="#2B2B2B" />
+        <div className="pt-4 flex justify-center mb-64">
+          <ThemeIcon
+            className="h-14 cursor-pointer"
+            fill={iconFillColor}
+            onClick={toggleTheme}
+          />
         </div>
-        <div
-          className={`relative h-10 w-10 mx-auto mb-8 ${
-            activeIcon === "formation" ? "bg-yellow rounded-full" : ""
-          } transition-all duration-300`}
-          onClick={() => handleClick("formation")}
-        >
-          <FormationIcon className="h-10 mx-auto mb-8" fill="#2B2B2B" />
-        </div>
-        <div
-          className={`relative h-10 w-10 mx-auto mb-8 ${
-            activeIcon === "work" ? "bg-yellow rounded-full" : ""
-          } transition-all duration-300`}
-          onClick={() => handleClick("work")}
-        >
-          <WorkIcon className="h-10 mx-auto mb-8" fill="#2B2B2B" />
-        </div>
-        <div
-          className={`relative h-10 w-10 mx-auto mb-8 ${
-            activeIcon === "recommandation" ? "bg-yellow rounded-full" : ""
-          } transition-all duration-300`}
-          onClick={() => handleClick("recommandation")}
-        >
-          <RecommandationIcon className="h-10 mx-auto mb-8" fill="#2B2B2B" />
-        </div>
-        <div
-          className={`relative h-10 w-10 mx-auto mb-2mb-8 ${
-            activeIcon === "projet" ? "bg-yellow rounded-full" : ""
-          } transition-all duration-300`}
-          onClick={() => handleClick("projet")}
-        >
-          <ProjetIcon className="h-10 mx-auto mb-8" fill="#2B2B2B" />
-        </div>
-        <div
-          className={`relative h-10 w-10 mx-auto mb-8 mt-8 ${
-            activeIcon === "contact" ? "bg-yellow rounded-full" : ""
-          } transition-all duration-300`}
-          onClick={() => handleClick("contact")}
-        >
-          <ContactIcon className="h-10 mx-auto mt-0" fill="#2B2B2B" />
+        <div className="mb-40 -mt-8">
+          <div
+            className={getIconClass("home")}
+            onClick={() => {
+              smoothScroll("home");
+              setActiveIcon("home");
+            }}
+          >
+            <HomeIcon
+              className="h-10 mx-auto mb-8 cursor-pointer"
+              fill={iconFillColor}
+            />
+          </div>
+          <div
+            className={getIconClass("formation")}
+            onClick={() => {
+              smoothScroll("formation");
+              setActiveIcon("formation");
+            }}
+          >
+            <FormationIcon
+              className="h-10 mx-auto mb-8 cursor-pointer"
+              fill={iconFillColor}
+            />
+          </div>
+          <div
+            className={getIconClass("work")}
+            onClick={() => {
+              smoothScroll("work");
+              setActiveIcon("work");
+            }}
+          >
+            <WorkIcon
+              className="h-10 mx-auto mb-8 cursor-pointer"
+              fill={iconFillColor}
+            />
+          </div>
+          <div
+            className={getIconClass("recommandation")}
+            onClick={() => {
+              smoothScroll("recommandation");
+              setActiveIcon("recommandation");
+            }}
+          >
+            <RecommandationIcon
+              className="h-10 mx-auto mb-8 cursor-pointer"
+              fill={iconFillColor}
+            />
+          </div>
+          <div
+            className={getIconClass("projet")}
+            onClick={() => {
+              smoothScroll("projet");
+              setActiveIcon("projet");
+            }}
+          >
+            <ProjetIcon
+              className="h-10 mx-auto mb-8 cursor-pointer"
+              fill={iconFillColor}
+            />
+          </div>
         </div>
       </div>
-      <div className="pb-4">
-        {/* Ajoutez les éléments de la barre de navigation à droite ici */}
-      </div>
+      <div className="pb-4"></div>
     </nav>
   );
 };
