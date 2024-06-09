@@ -39,7 +39,7 @@ const VerticalNavbar = () => {
     const observer = new IntersectionObserver(handleScroll, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5,
+      threshold: 1.0,
     });
 
     const sections = ["home", "formation", "work", "recommandation", "projet"];
