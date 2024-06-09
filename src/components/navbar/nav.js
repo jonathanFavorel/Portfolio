@@ -7,6 +7,13 @@ import { ReactComponent as ThemeIcon } from "./src/Theme.svg";
 import { ReactComponent as WorkIcon } from "./src/Work.svg";
 
 const VerticalNavbar = () => {
+  const smoothScroll = (targetId) => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
@@ -21,23 +28,21 @@ const VerticalNavbar = () => {
   const [activeIcon, setActiveIcon] = useState("home");
 
   useEffect(() => {
-    const sections = ["home", "formation", "work", "recommandation", "projet"];
-
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 1.0,
-    };
-
-    const handleIntersect = (entries) => {
+    const handleScroll = (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.intersectionRatio === 1) {
           setActiveIcon(entry.target.id);
         }
       });
     };
 
-    const observer = new IntersectionObserver(handleIntersect, options);
+    const observer = new IntersectionObserver(handleScroll, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 1.0, // Entire section must be visible
+    });
+
+    const sections = ["home", "formation", "work", "recommandation", "projet"];
 
     sections.forEach((id) => {
       const section = document.getElementById(id);
@@ -57,6 +62,16 @@ const VerticalNavbar = () => {
   }, []);
 
   useEffect(() => {
+    // Check which section is at the top of the page on load
+    const sections = ["home", "formation", "work", "recommandation", "projet"];
+    sections.forEach((id) => {
+      const section = document.getElementById(id);
+      const rect = section.getBoundingClientRect();
+      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        setActiveIcon(id);
+      }
+    });
+
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -86,56 +101,66 @@ const VerticalNavbar = () => {
           />
         </div>
         <div className="mb-40 -mt-8">
-          <a
-            href="#home"
+          <div
             className={getIconClass("home")}
-            onClick={() => setActiveIcon("home")}
+            onClick={() => {
+              smoothScroll("home");
+              setActiveIcon("home");
+            }}
           >
             <HomeIcon
               className="h-10 mx-auto mb-8 cursor-pointer"
               fill={iconFillColor}
             />
-          </a>
-          <a
-            href="#formation"
+          </div>
+          <div
             className={getIconClass("formation")}
-            onClick={() => setActiveIcon("formation")}
+            onClick={() => {
+              smoothScroll("formation");
+              setActiveIcon("formation");
+            }}
           >
             <FormationIcon
               className="h-10 mx-auto mb-8 cursor-pointer"
               fill={iconFillColor}
             />
-          </a>
-          <a
-            href="#work"
+          </div>
+          <div
             className={getIconClass("work")}
-            onClick={() => setActiveIcon("work")}
+            onClick={() => {
+              smoothScroll("work");
+              setActiveIcon("work");
+            }}
           >
             <WorkIcon
               className="h-10 mx-auto mb-8 cursor-pointer"
               fill={iconFillColor}
             />
-          </a>
-          <a
-            href="#recommandation"
+          </div>
+          <div
             className={getIconClass("recommandation")}
-            onClick={() => setActiveIcon("recommandation")}
+            onClick={() => {
+              smoothScroll("recommandation");
+              setActiveIcon("recommandation");
+            }}
           >
             <RecommandationIcon
               className="h-10 mx-auto mb-8 cursor-pointer"
               fill={iconFillColor}
             />
-          </a>
-          <a
-            href="#projet"
+          </div>
+          <div
             className={getIconClass("projet")}
-            onClick={() => setActiveIcon("projet")}
+            onClick={() => {
+              smoothScroll("projet");
+              setActiveIcon("projet");
+            }}
           >
             <ProjetIcon
               className="h-10 mx-auto mb-8 cursor-pointer"
               fill={iconFillColor}
             />
-          </a>
+          </div>
         </div>
       </div>
       <div className="pb-4"></div>
