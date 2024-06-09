@@ -96,9 +96,9 @@ const Central = () => {
   return (
     <div className="bg-white mr-36 -ml-4 dark:bg-blackbg  hidden sm:block">
       <div className="bg-white1 p-0 mb-8 ml-8 mr-8 h-90 flex flex-grow relative overflow-hidden area dark:bg-blackdark">
+        <a href="#home"></a>
         <div className="max-w-3xl flex-grow relative z-10 ">
           <h1 className="text-4xl font-inter font-bold mb-16 mt-10 ml-8 dark:text-white1">
-            <a href="#home"></a>
             Je m'appelle Jonathan <br></br>Développeur{" "}
             <span className="text-yellow">Front-end</span>
           </h1>
