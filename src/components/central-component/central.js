@@ -187,6 +187,7 @@ const Central = () => {
       <div className="mb-32">
         <div className="text-center">
           <h2 className="font-inter text-3xl font-bold mb-4 dark:text-white">
+            <section id="formation"></section>
             Formations
           </h2>
           <p className="font-inter-regular text-base mb-6 px-64 text-grey dark:text-white">
@@ -249,11 +250,7 @@ const Central = () => {
                 {/* Première colonne pour les titres et les descriptions des diplômes */}
                 <td className="w-3/4 p-8">
                   <div className="text-lg font-semibold">
-                    <h2
-                      className="text-lg font-inter-medium text-black dark:text-white"
-                      id="formation"
-                    >
-                      <section id="formation"></section>
+                    <h2 className="text-lg font-inter-medium text-black dark:text-white">
                       Brevet de Technicien Supérieur
                     </h2>
                     <div className="flex justify-between">
@@ -336,6 +333,7 @@ const Central = () => {
       <div>
         <div className="text-center">
           <h2 className="font-inter text-3xl font-bold mb-4  dark:text-white">
+            <section id="work"></section>
             Experience Professionnel
           </h2>
           <p className="font-inter-regular text-base mb-6 px-64 text-grey dark:text-white">
@@ -418,13 +416,10 @@ const Central = () => {
                 {/* Deuxième colonne pour les descriptions des diplômes */}
                 <td className="w-3/4 p-4 pr-24">
                   <div className="mb-4">
-                    <h3
-                      className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white"
-                      id="work"
-                    >
+                    <h3 className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white">
                       Altimance - Anzin
                     </h3>
-                    <section id="work"></section>
+
                     <p className="text-grey font-inter-regular mt-6 dark:text-white">
                       Chez Altimance, j'ai géré les demandes de trois clients
                       importants : SCC, Expanscience et BEG. Ce rôle m'a permis
@@ -532,6 +527,7 @@ const Central = () => {
       <div className="">
         <div className="text-center">
           <h2 className="font-inter text-3xl font-bold mb-16 mt-16 dark:text-white">
+            <section id="recommandation"></section>
             Recommandations
           </h2>
         </div>
@@ -566,11 +562,7 @@ const Central = () => {
                     <p class="text-sm text-grey font-inter-light dark:text-white">
                       Supérviseur équipe
                     </p>
-                    <p
-                      class="text-sm text-grey font-inter-light dark:text-white"
-                      id="recommandation"
-                    >
-                      <section id="recommandation"></section>
+                    <p class="text-sm text-grey font-inter-light dark:text-white">
                       Altimance
                     </p>
                   </div>
@@ -625,6 +617,7 @@ const Central = () => {
       <div>
         <div className="text-center">
           <h2 className="font-inter text-3xl font-bold mb-4 mt-16 mb-12 dark:text-white">
+            <section id="projet"></section>
             Portfolio
           </h2>
           <p className="font-inter-regular text-base mb-6 px-64 text-grey dark:text-white">
@@ -641,8 +634,7 @@ const Central = () => {
             <ProjectImage src={projet2} alt="Description de l'image 2" />
             <ProjectImage src={projet3} alt="Description de l'image 3" />
           </div>
-          <div className="flex justify-center mt-8" id="projet">
-            <section id="projet"></section>
+          <div className="flex justify-center mt-8">
             <ProjectImage src={projet1} alt="Description de l'image 1" />
             <ProjectImage src={projet2} alt="Description de l'image 2" />
             <ProjectImage src={projet3} alt="Description de l'image 3" />
