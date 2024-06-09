@@ -419,9 +419,13 @@ const Central = () => {
                 {/* Deuxième colonne pour les descriptions des diplômes */}
                 <td className="w-3/4 p-4 pr-24">
                   <div className="mb-4">
-                    <h3 className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white">
+                    <h3
+                      className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white"
+                      id="work"
+                    >
                       Altimance - Anzin
                     </h3>
+                    <section id="work"></section>
                     <p className="text-grey font-inter-regular mt-6 dark:text-white">
                       Chez Altimance, j'ai géré les demandes de trois clients
                       importants : SCC, Expanscience et BEG. Ce rôle m'a permis
@@ -466,7 +470,7 @@ const Central = () => {
                     <h3 className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white">
                       Modis (Crédit du nord) - Lille
                     </h3>
-                    <section id="work"></section>
+
                     <p className="text-grey font-inter-regular mt-6 dark:text-white">
                       En tant que technicien helpdesk au Crédit du Nord à Lille,
                       j'ai pris en charge les demandes des conseillers à

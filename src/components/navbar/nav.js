@@ -42,14 +42,7 @@ const VerticalNavbar = () => {
       threshold: 0.5,
     });
 
-    const sections = [
-      "home",
-      "formation",
-      "work",
-      "recommandation",
-      "projet",
-      "contact",
-    ];
+    const sections = ["home", "formation", "work", "recommandation", "projet"];
 
     sections.forEach((id) => {
       const section = document.getElementById(id);
