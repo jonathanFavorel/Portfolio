@@ -21,28 +21,38 @@ const VerticalNavbar = () => {
   const [activeIcon, setActiveIcon] = useState("home");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        "home",
-        "formation",
-        "work",
-        "recommandation",
-        "projet",
-      ];
-      sections.forEach((id) => {
-        const section = document.getElementById(id);
-        const rect = section.getBoundingClientRect();
-        if (rect.top === 0) {
-          setActiveIcon(id);
+    const sections = ["home", "formation", "work", "recommandation", "projet"];
+
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 1.0,
+    };
+
+    const handleIntersect = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveIcon(entry.target.id);
         }
       });
     };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Call once on mount to set initial state
+    const observer = new IntersectionObserver(handleIntersect, options);
+
+    sections.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) {
+        observer.observe(section);
+      }
+    });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      sections.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
     };
   }, []);
 
