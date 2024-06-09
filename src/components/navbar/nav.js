@@ -29,13 +29,18 @@ const VerticalNavbar = () => {
         "recommandation",
         "projet",
       ];
+      let found = false;
       sections.forEach((id) => {
         const section = document.getElementById(id);
         const rect = section.getBoundingClientRect();
-        if (rect.top <= 0 && rect.bottom >= 0) {
+        if (rect.top <= 0 && rect.bottom >= 0 && !found) {
           setActiveIcon(id);
+          found = true;
         }
       });
+      if (!found) {
+        setActiveIcon("home");
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
