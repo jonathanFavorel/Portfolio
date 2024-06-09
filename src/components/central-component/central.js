@@ -249,11 +249,7 @@ const Central = () => {
                 {/* Première colonne pour les titres et les descriptions des diplômes */}
                 <td className="w-3/4 p-8">
                   <div className="text-lg font-semibold">
-                    <h2
-                      className="text-lg font-inter-medium text-black dark:text-white"
-                      id="formation"
-                    >
-                      <section id="formation"></section>
+                    <h2 className="text-lg font-inter-medium text-black dark:text-white">
                       Brevet de Technicien Supérieur
                     </h2>
                     <div className="flex justify-between">
@@ -274,6 +270,7 @@ const Central = () => {
                 <td className="w-3/4 p-4 pr-24">
                   <div className="mb-4">
                     <h3 className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white">
+                      <section id="formation"></section>
                       Services informatiques aux organisations option SLAM
                     </h3>
                     <p className="text-grey font-inter-regular mt-6 dark:text-white">
