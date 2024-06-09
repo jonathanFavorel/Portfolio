@@ -97,11 +97,8 @@ const Central = () => {
     <div className="bg-white mr-36 -ml-4 dark:bg-blackbg  hidden sm:block">
       <div className="bg-white1 p-0 mb-8 ml-8 mr-8 h-90 flex flex-grow relative overflow-hidden area dark:bg-blackdark">
         <div className="max-w-3xl flex-grow relative z-10 ">
-          <h1
-            className="text-4xl font-inter font-bold mb-16 mt-10 ml-8 dark:text-white1"
-            id="home"
-          >
-            <section id="home"></section>
+          <h1 className="text-4xl font-inter font-bold mb-16 mt-10 ml-8 dark:text-white1">
+            <a href="#home"></a>
             Je m'appelle Jonathan <br></br>Développeur{" "}
             <span className="text-yellow">Front-end</span>
           </h1>
@@ -190,7 +187,7 @@ const Central = () => {
       <div className="mb-32">
         <div className="text-center">
           <h2 className="font-inter text-3xl font-bold mb-4 dark:text-white">
-            <section id="formation"></section>
+            <a href="formation"></a>
             Formations
           </h2>
           <p className="font-inter-regular text-base mb-6 px-64 text-grey dark:text-white">
@@ -336,7 +333,7 @@ const Central = () => {
       <div>
         <div className="text-center">
           <h2 className="font-inter text-3xl font-bold mb-4  dark:text-white">
-            <section id="work"></section>
+            <a href="work"></a>
             Experience Professionnel
           </h2>
           <p className="font-inter-regular text-base mb-6 px-64 text-grey dark:text-white">
@@ -530,7 +527,7 @@ const Central = () => {
       <div className="">
         <div className="text-center">
           <h2 className="font-inter text-3xl font-bold mb-16 mt-16 dark:text-white">
-            <section id="recommandation"></section>
+            <a href="recommandation"></a>
             Recommandations
           </h2>
         </div>
@@ -620,7 +617,7 @@ const Central = () => {
       <div>
         <div className="text-center">
           <h2 className="font-inter text-3xl font-bold mb-4 mt-16 mb-12 dark:text-white">
-            <section id="projet"></section>
+            <a href="projet"></a>
             Portfolio
           </h2>
           <p className="font-inter-regular text-base mb-6 px-64 text-grey dark:text-white">
