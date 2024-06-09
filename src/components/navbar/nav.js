@@ -30,7 +30,7 @@ const VerticalNavbar = () => {
   useEffect(() => {
     const handleScroll = (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.intersectionRatio === 1) {
           setActiveIcon(entry.target.id);
         }
       });
@@ -38,7 +38,7 @@ const VerticalNavbar = () => {
 
     const observer = new IntersectionObserver(handleScroll, {
       root: null,
-      rootMargin: "0px",
+      rootMargin: "0px 0px -100% 0px",
       threshold: 1.0,
     });
 
