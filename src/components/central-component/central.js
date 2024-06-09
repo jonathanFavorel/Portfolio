@@ -639,14 +639,15 @@ const Central = () => {
             <ProjectImage src={projet2} alt="Description de l'image 2" />
             <ProjectImage src={projet3} alt="Description de l'image 3" />
           </div>
-          <section id="projet">
-            <div className="flex justify-center mt-8">
-              <ProjectImage src={projet1} alt="Description de l'image 1" />
-              <ProjectImage src={projet2} alt="Description de l'image 2" />
-              <ProjectImage src={projet3} alt="Description de l'image 3" />
-            </div>
-          </section>
+
           <div className="flex justify-center mt-8">
+            <ProjectImage src={projet1} alt="Description de l'image 1" />
+            <ProjectImage src={projet2} alt="Description de l'image 2" />
+            <ProjectImage src={projet3} alt="Description de l'image 3" />
+          </div>
+
+          <div className="flex justify-center mt-8">
+            <section id="projet"></section>
             <ProjectImage src={projet1} alt="Description de l'image 1" />
             <ProjectImage src={projet2} alt="Description de l'image 2" />
             <ProjectImage src={projet3} alt="Description de l'image 3" />
