@@ -160,7 +160,7 @@ const MyComponent = ({ isDarkMode }) => {
       <div>
         <Recommandation />
         <div className="sm:ml-0 sm:mr-4">
-          <h2 className="font-inter text-3xl  font-bold mb-4 mt-16 mb-12 dark:text-white">
+          <h2 className="font-inter text-3xl text-center font-bold mb-4 mt-16 mb-12 dark:text-white">
             Portfolio
           </h2>
           <p className="font-inter-regular text-center text-base text-grey dark:text-white">

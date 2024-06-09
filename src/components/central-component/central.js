@@ -466,6 +466,7 @@ const Central = () => {
                     <h3 className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white">
                       Modis (Crédit du nord) - Lille
                     </h3>
+                    <section id="work"></section>
                     <p className="text-grey font-inter-regular mt-6 dark:text-white">
                       En tant que technicien helpdesk au Crédit du Nord à Lille,
                       j'ai pris en charge les demandes des conseillers à
@@ -517,7 +518,6 @@ const Central = () => {
                       de renforcer mes compétences en développement front-end et
                       d'acquérir une bonne compréhension des bonnes pratiques de
                       conception web.
-                      <section id="work"></section>
                     </p>
                   </div>
                 </td>
