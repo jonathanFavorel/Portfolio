@@ -249,7 +249,11 @@ const Central = () => {
                 {/* Première colonne pour les titres et les descriptions des diplômes */}
                 <td className="w-3/4 p-8">
                   <div className="text-lg font-semibold">
-                    <h2 className="text-lg font-inter-medium text-black dark:text-white">
+                    <h2
+                      className="text-lg font-inter-medium text-black dark:text-white"
+                      id="formation"
+                    >
+                      <section id="formation"></section>
                       Brevet de Technicien Supérieur
                     </h2>
                     <div className="flex justify-between">
@@ -292,11 +296,7 @@ const Central = () => {
                 {/* Première colonne pour les titres et les descriptions des diplômes */}
                 <td className="w-3/4 p-8">
                   <div className="text-lg font-semibold">
-                    <h2
-                      className="text-lg font-inter-medium text-black dark:text-white"
-                      id="formation"
-                    >
-                      <section id="formation"></section>
+                    <h2 className="text-lg font-inter-medium text-black dark:text-white">
                       Technicien d’usinage
                     </h2>
                     <div className="flex justify-between">
@@ -315,7 +315,6 @@ const Central = () => {
                 </td>
                 {/* Deuxième colonne pour les descriptions des diplômes */}
                 <td className="w-3/4 p-4 pr-24 formation">
-                  <section id="formation"></section>
                   <div className="mb-4">
                     <h3 className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white">
                       Baccalauréat Professionnel
