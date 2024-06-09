@@ -186,21 +186,22 @@ const Central = () => {
           />
         </div>
       </section>
-      <section id="formation">
-        <div className="mb-32">
-          <div className="text-center">
-            <h2 className="font-inter text-3xl font-bold mb-4 dark:text-white">
-              Formations
-            </h2>
-            <p className="font-inter-regular text-base mb-6 px-64 text-grey dark:text-white">
-              Mes compétences solides résultent d'un parcours académique
-              diversifié et d'un apprentissage autodidacte. J'ai suivi des
-              études approfondies dans divers domaines technologiques,
-              complétées par des cours spécialisés en développement web. Cette
-              approche mixte m’a permis d'acquérir une expertise polyvalente et
-              une compréhension approfondie des technologies modernes
-            </p>
-          </div>
+
+      <div className="mb-32">
+        <div className="text-center">
+          <h2 className="font-inter text-3xl font-bold mb-4 dark:text-white">
+            Formations
+          </h2>
+          <p className="font-inter-regular text-base mb-6 px-64 text-grey dark:text-white">
+            Mes compétences solides résultent d'un parcours académique
+            diversifié et d'un apprentissage autodidacte. J'ai suivi des études
+            approfondies dans divers domaines technologiques, complétées par des
+            cours spécialisés en développement web. Cette approche mixte m’a
+            permis d'acquérir une expertise polyvalente et une compréhension
+            approfondie des technologies modernes
+          </p>
+        </div>
+        <section id="formation">
           <div className="bg-white1 p-0 mb-16 ml-8 mr-8 h-90 flex flex-grow relative overflow-hidden dark:bg-blackdark">
             <div className="flex">
               {/* Tableau des diplômes */}
@@ -331,93 +332,94 @@ const Central = () => {
               </table>
             </div>
           </div>
+        </section>
+      </div>
+
+      <div>
+        <div className="text-center">
+          <h2 className="font-inter text-3xl font-bold mb-4  dark:text-white">
+            Experience Professionnel
+          </h2>
+          <p className="font-inter-regular text-base mb-6 px-64 text-grey dark:text-white">
+            Mon parcours professionnel diversifié m'a permis de développer mes
+            compétences en HTML, CSS, JavaScript, ainsi que sur des frameworks
+            comme React et Angular. Cette combinaison d'expériences et
+            d'apprentissage autodidacte a consolidé mon expertise en
+            développement front-end.
+          </p>
         </div>
-      </section>
-      <section id="work">
-        <div>
-          <div className="text-center">
-            <h2 className="font-inter text-3xl font-bold mb-4  dark:text-white">
-              Experience Professionnel
-            </h2>
-            <p className="font-inter-regular text-base mb-6 px-64 text-grey dark:text-white">
-              Mon parcours professionnel diversifié m'a permis de développer mes
-              compétences en HTML, CSS, JavaScript, ainsi que sur des frameworks
-              comme React et Angular. Cette combinaison d'expériences et
-              d'apprentissage autodidacte a consolidé mon expertise en
-              développement front-end.
-            </p>
-          </div>
-          <div className="bg-white1 p-0 mb-8 ml-8 mr-8 h-90 flex flex-grow relative overflow-hidden dark:bg-blackdark">
-            <div className="flex">
-              {/* Tableau des diplômes */}
-              <table className="w-full">
-                {/* Première ligne du tableau */}
-                <tr className="flex">
-                  {/* Première colonne pour les titres et les descriptions des diplômes */}
-                  <td className="w-3/4 p-8">
-                    <div className="text-lg font-semibold">
-                      <h2 className="text-lg font-inter-medium text-black dark:text-white">
-                        Développeur Web
-                      </h2>
-                      <div className="flex justify-between">
-                        <div className="flex justify-between items-center">
-                          <h2 className="text-sm font-inter-regular text-black mr-4 mt-6 dark:text-white">
-                            Apprentissage
-                          </h2>
-                          <div className="rounded bg-yellow p-1 pt-0 pb-0 mt-5">
-                            <h6 className="text-xs text-white1 dark:text-white1">
-                              Février 2022 - Actuellement
-                            </h6>
-                          </div>
+        <div className="bg-white1 p-0 mb-8 ml-8 mr-8 h-90 flex flex-grow relative overflow-hidden dark:bg-blackdark">
+          <div className="flex">
+            {/* Tableau des diplômes */}
+            <table className="w-full">
+              {/* Première ligne du tableau */}
+              <tr className="flex">
+                {/* Première colonne pour les titres et les descriptions des diplômes */}
+                <td className="w-3/4 p-8">
+                  <div className="text-lg font-semibold">
+                    <h2 className="text-lg font-inter-medium text-black dark:text-white">
+                      Développeur Web
+                    </h2>
+                    <div className="flex justify-between">
+                      <div className="flex justify-between items-center">
+                        <h2 className="text-sm font-inter-regular text-black mr-4 mt-6 dark:text-white">
+                          Apprentissage
+                        </h2>
+                        <div className="rounded bg-yellow p-1 pt-0 pb-0 mt-5">
+                          <h6 className="text-xs text-white1 dark:text-white1">
+                            Février 2022 - Actuellement
+                          </h6>
                         </div>
                       </div>
                     </div>
-                  </td>
-                  {/* Deuxième colonne pour les descriptions des diplômes */}
-                  <td className="w-3/4 p-4 pr-24">
-                    <div className="mb-6">
-                      <h3 className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white">
-                        FACIL - Saint-Amand-les-Eaux
-                      </h3>
-                      <p className="text-grey font-inter-regular mt-6 dark:text-white">
-                        Chez FACIL, j'ai travaillé sur le développement de
-                        diverses applications métier. En parallèle, j'ai créé et
-                        maintenu des sites web en Next.js. Cette expérience m'a
-                        permis d'enrichir mes compétences en développement
-                        informatique, de comprendre les besoins des utilisateurs
-                        finaux et de collaborer efficacement avec les équipes de
-                        projet.
-                      </p>
-                    </div>
-                  </td>
-                </tr>
-                {/* Ligne visuelle */}
-                <div className="flex justify-center">
-                  <div className="border-b border-gray-300 w-full mx-8 mb-4"></div>
-                </div>
-                <tr className="flex">
-                  {/* Première colonne pour les titres et les descriptions des diplômes */}
-                  <td className="w-3/4 p-8">
-                    <div className="text-lg font-semibold">
-                      <h2 className="text-lg font-inter-medium text-black dark:text-white">
-                        Technicien HelpDesk
-                      </h2>
-                      <div className="flex justify-between">
-                        <div className="flex justify-between items-center">
-                          <h2 className="text-sm font-inter-regular text-black mr-4 mt-6 dark:text-white">
-                            Employé
-                          </h2>
-                          <div className="rounded bg-yellow p-1 pt-0 pb-0 mt-5">
-                            <h6 className="text-xs text-white1 dark:text-white1">
-                              Juin 2021 - Aout 2021
-                            </h6>
-                          </div>
+                  </div>
+                </td>
+                {/* Deuxième colonne pour les descriptions des diplômes */}
+                <td className="w-3/4 p-4 pr-24">
+                  <div className="mb-6">
+                    <h3 className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white">
+                      FACIL - Saint-Amand-les-Eaux
+                    </h3>
+                    <p className="text-grey font-inter-regular mt-6 dark:text-white">
+                      Chez FACIL, j'ai travaillé sur le développement de
+                      diverses applications métier. En parallèle, j'ai créé et
+                      maintenu des sites web en Next.js. Cette expérience m'a
+                      permis d'enrichir mes compétences en développement
+                      informatique, de comprendre les besoins des utilisateurs
+                      finaux et de collaborer efficacement avec les équipes de
+                      projet.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              {/* Ligne visuelle */}
+              <div className="flex justify-center">
+                <div className="border-b border-gray-300 w-full mx-8 mb-4"></div>
+              </div>
+              <tr className="flex">
+                {/* Première colonne pour les titres et les descriptions des diplômes */}
+                <td className="w-3/4 p-8">
+                  <div className="text-lg font-semibold">
+                    <h2 className="text-lg font-inter-medium text-black dark:text-white">
+                      Technicien HelpDesk
+                    </h2>
+                    <div className="flex justify-between">
+                      <div className="flex justify-between items-center">
+                        <h2 className="text-sm font-inter-regular text-black mr-4 mt-6 dark:text-white">
+                          Employé
+                        </h2>
+                        <div className="rounded bg-yellow p-1 pt-0 pb-0 mt-5">
+                          <h6 className="text-xs text-white1 dark:text-white1">
+                            Juin 2021 - Aout 2021
+                          </h6>
                         </div>
                       </div>
                     </div>
-                  </td>
-                  {/* Deuxième colonne pour les descriptions des diplômes */}
-                  <td className="w-3/4 p-4 pr-24">
+                  </div>
+                </td>
+                {/* Deuxième colonne pour les descriptions des diplômes */}
+                <td className="w-3/4 p-4 pr-24">
+                  <section id="work">
                     <div className="mb-4">
                       <h3 className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white">
                         Altimance - Anzin
@@ -435,102 +437,103 @@ const Central = () => {
                         situations diverses.
                       </p>
                     </div>
-                  </td>
-                </tr>
-                {/* Deuxième ligne du tableau */}
-                <div className="flex justify-center">
-                  <div className="border-b border-gray-300 w-full mx-8 mb-4"></div>
-                </div>
-                <tr className="flex">
-                  {/* Première colonne pour les titres et les descriptions des diplômes */}
-                  <td className="w-3/4 p-8">
-                    <div className="text-lg font-semibold">
-                      <h2 className="text-lg font-inter-medium text-black dark:text-white">
-                        Technicien HelpDesk
-                      </h2>
-                      <div className="flex justify-between">
-                        <div className="flex justify-between items-center">
-                          <h2 className="text-sm font-inter-regular text-black mr-4 mt-6 dark:text-white">
-                            Employé
-                          </h2>
-                          <div className="rounded bg-yellow p-1 pt-0 pb-0 mt-5">
-                            <h6 className="text-xs text-white1 dark:text-white1">
-                              Janvier 2021 - Avril 2021
-                            </h6>
-                          </div>
+                  </section>
+                </td>
+              </tr>
+              {/* Deuxième ligne du tableau */}
+              <div className="flex justify-center">
+                <div className="border-b border-gray-300 w-full mx-8 mb-4"></div>
+              </div>
+              <tr className="flex">
+                {/* Première colonne pour les titres et les descriptions des diplômes */}
+                <td className="w-3/4 p-8">
+                  <div className="text-lg font-semibold">
+                    <h2 className="text-lg font-inter-medium text-black dark:text-white">
+                      Technicien HelpDesk
+                    </h2>
+                    <div className="flex justify-between">
+                      <div className="flex justify-between items-center">
+                        <h2 className="text-sm font-inter-regular text-black mr-4 mt-6 dark:text-white">
+                          Employé
+                        </h2>
+                        <div className="rounded bg-yellow p-1 pt-0 pb-0 mt-5">
+                          <h6 className="text-xs text-white1 dark:text-white1">
+                            Janvier 2021 - Avril 2021
+                          </h6>
                         </div>
                       </div>
                     </div>
-                  </td>
-                  {/* Deuxième colonne pour les descriptions des diplômes */}
-                  <td className="w-3/4 p-4 pr-24">
-                    <div className="mb-4">
-                      <h3 className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white">
-                        Modis (Crédit du nord) - Lille
-                      </h3>
+                  </div>
+                </td>
+                {/* Deuxième colonne pour les descriptions des diplômes */}
+                <td className="w-3/4 p-4 pr-24">
+                  <div className="mb-4">
+                    <h3 className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white">
+                      Modis (Crédit du nord) - Lille
+                    </h3>
 
-                      <p className="text-grey font-inter-regular mt-6 dark:text-white">
-                        En tant que technicien helpdesk au Crédit du Nord à
-                        Lille, j'ai pris en charge les demandes des conseillers
-                        à l'échelle nationale.Cette expérience m'a permis de
-                        développer mes compétences en support technique, de
-                        renforcer ma capacité à résoudre des problèmes
-                        rapidement et de travailler efficacement sous pression.
-                      </p>
-                    </div>
-                  </td>
-                </tr>
+                    <p className="text-grey font-inter-regular mt-6 dark:text-white">
+                      En tant que technicien helpdesk au Crédit du Nord à Lille,
+                      j'ai pris en charge les demandes des conseillers à
+                      l'échelle nationale.Cette expérience m'a permis de
+                      développer mes compétences en support technique, de
+                      renforcer ma capacité à résoudre des problèmes rapidement
+                      et de travailler efficacement sous pression.
+                    </p>
+                  </div>
+                </td>
+              </tr>
 
-                {/* Ligne visuelle */}
-                <div className="flex justify-center">
-                  <div className="border-b border-gray-300 w-full mx-8 mb-4"></div>
-                </div>
-                {/* Deuxième ligne du tableau */}
-                <tr className="flex">
-                  {/* Première colonne pour les titres et les descriptions des diplômes */}
-                  <td className="w-3/4 p-8">
-                    <div className="text-lg font-semibold">
-                      <h2 className="text-lg font-inter-medium text-black dark:text-white">
-                        Développeur Web
-                      </h2>
-                      <div className="flex justify-between">
-                        <div className="flex justify-between items-center">
-                          <h2 className="text-sm font-inter-regular text-black mr-4 mt-6 dark:text-white">
-                            Aprentissage
-                          </h2>
-                          <div className="rounded bg-yellow p-1 pt-0 pb-0 mt-5">
-                            <h6 className="text-xs text-white1 dark:text-white1">
-                              Août 2018 - Août 2020
-                            </h6>
-                          </div>
+              {/* Ligne visuelle */}
+              <div className="flex justify-center">
+                <div className="border-b border-gray-300 w-full mx-8 mb-4"></div>
+              </div>
+              {/* Deuxième ligne du tableau */}
+              <tr className="flex">
+                {/* Première colonne pour les titres et les descriptions des diplômes */}
+                <td className="w-3/4 p-8">
+                  <div className="text-lg font-semibold">
+                    <h2 className="text-lg font-inter-medium text-black dark:text-white">
+                      Développeur Web
+                    </h2>
+                    <div className="flex justify-between">
+                      <div className="flex justify-between items-center">
+                        <h2 className="text-sm font-inter-regular text-black mr-4 mt-6 dark:text-white">
+                          Aprentissage
+                        </h2>
+                        <div className="rounded bg-yellow p-1 pt-0 pb-0 mt-5">
+                          <h6 className="text-xs text-white1 dark:text-white1">
+                            Août 2018 - Août 2020
+                          </h6>
                         </div>
                       </div>
                     </div>
-                  </td>
-                  {/* Deuxième colonne pour les descriptions des diplômes */}
-                  <td className="w-3/4 p-4 pr-24">
-                    <div className="mb-4">
-                      <h3 className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white">
-                        Ecoburotic - Rouvignies
-                      </h3>
-                      <p className="text-grey font-inter-regular mt-6 dark:text-white">
-                        Chez Ecoburotic, j'ai contribué au développement du site
-                        vitrine de l'entreprise en utilisant principalement HTML
-                        et CSS, avec une touche de PHP.Cette expérience m'a
-                        permis de renforcer mes compétences en développement
-                        front-end et d'acquérir une bonne compréhension des
-                        bonnes pratiques de conception web.
-                      </p>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
+                  </div>
+                </td>
+                {/* Deuxième colonne pour les descriptions des diplômes */}
+                <td className="w-3/4 p-4 pr-24">
+                  <div className="mb-4">
+                    <h3 className="text-lg font-inter-medium font-bold text-black mt-4 dark:text-white">
+                      Ecoburotic - Rouvignies
+                    </h3>
+                    <p className="text-grey font-inter-regular mt-6 dark:text-white">
+                      Chez Ecoburotic, j'ai contribué au développement du site
+                      vitrine de l'entreprise en utilisant principalement HTML
+                      et CSS, avec une touche de PHP.Cette expérience m'a permis
+                      de renforcer mes compétences en développement front-end et
+                      d'acquérir une bonne compréhension des bonnes pratiques de
+                      conception web.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
-      </section>
-      <section id="recommandation">
-        <div className="">
+      </div>
+
+      <div className="">
+        <section id="recommandation">
           <div className="text-center">
             <h2 className="font-inter text-3xl font-bold mb-16 mt-16 dark:text-white">
               Recommandations
@@ -618,8 +621,9 @@ const Central = () => {
             <img src={point} alt="" class="h-2 w-auto" />
             <img src={point} alt="" class="h-2 w-auto" />
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
       <div>
         <div className="text-center">
           <h2 className="font-inter text-3xl font-bold mb-4 mt-16 mb-12 dark:text-white">
@@ -633,6 +637,7 @@ const Central = () => {
             front-end.
           </p>
         </div>
+
         <div className="mb-16 sm:ml-0 sm:mr-4">
           <div className="flex justify-center mt-16">
             <ProjectImage src={projet1} alt="Description de l'image 1" />
@@ -640,14 +645,15 @@ const Central = () => {
             <ProjectImage src={projet3} alt="Description de l'image 3" />
           </div>
 
-          <div className="flex justify-center mt-8">
-            <ProjectImage src={projet1} alt="Description de l'image 1" />
-            <ProjectImage src={projet2} alt="Description de l'image 2" />
-            <ProjectImage src={projet3} alt="Description de l'image 3" />
-          </div>
+          <section id="projet">
+            <div className="flex justify-center mt-8">
+              <ProjectImage src={projet1} alt="Description de l'image 1" />
+              <ProjectImage src={projet2} alt="Description de l'image 2" />
+              <ProjectImage src={projet3} alt="Description de l'image 3" />
+            </div>
+          </section>
 
           <div className="flex justify-center mt-8">
-            <section id="projet"></section>
             <ProjectImage src={projet1} alt="Description de l'image 1" />
             <ProjectImage src={projet2} alt="Description de l'image 2" />
             <ProjectImage src={projet3} alt="Description de l'image 3" />
