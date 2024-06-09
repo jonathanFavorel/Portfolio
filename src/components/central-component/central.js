@@ -620,39 +620,40 @@ const Central = () => {
           </div>
         </div>
       </section>
-      <section id="projet">
-        <div>
-          <div className="text-center">
-            <h2 className="font-inter text-3xl font-bold mb-4 mt-16 mb-12 dark:text-white">
-              Portfolio
-            </h2>
-            <p className="font-inter-regular text-base mb-6 px-64 text-grey dark:text-white">
-              Dans mes projets personnels, j'ai utilisé HTML, CSS, et JavaScript
-              pour créer des sites web interactifs. J'ai également travaillé
-              avec React et Angular pour développer des applications dynamiques.
-              Cette expérience m'a permis de consolider mon expertise en
-              développement front-end.
-            </p>
+      <div>
+        <div className="text-center">
+          <h2 className="font-inter text-3xl font-bold mb-4 mt-16 mb-12 dark:text-white">
+            Portfolio
+          </h2>
+          <p className="font-inter-regular text-base mb-6 px-64 text-grey dark:text-white">
+            Dans mes projets personnels, j'ai utilisé HTML, CSS, et JavaScript
+            pour créer des sites web interactifs. J'ai également travaillé avec
+            React et Angular pour développer des applications dynamiques. Cette
+            expérience m'a permis de consolider mon expertise en développement
+            front-end.
+          </p>
+        </div>
+        <div className="mb-16 sm:ml-0 sm:mr-4">
+          <div className="flex justify-center mt-16">
+            <ProjectImage src={projet1} alt="Description de l'image 1" />
+            <ProjectImage src={projet2} alt="Description de l'image 2" />
+            <ProjectImage src={projet3} alt="Description de l'image 3" />
           </div>
-          <div className="mb-16 sm:ml-0 sm:mr-4">
-            <div className="flex justify-center mt-16">
-              <ProjectImage src={projet1} alt="Description de l'image 1" />
-              <ProjectImage src={projet2} alt="Description de l'image 2" />
-              <ProjectImage src={projet3} alt="Description de l'image 3" />
-            </div>
+          <section id="projet">
             <div className="flex justify-center mt-8">
               <ProjectImage src={projet1} alt="Description de l'image 1" />
               <ProjectImage src={projet2} alt="Description de l'image 2" />
               <ProjectImage src={projet3} alt="Description de l'image 3" />
             </div>
-            <div className="flex justify-center mt-8">
-              <ProjectImage src={projet1} alt="Description de l'image 1" />
-              <ProjectImage src={projet2} alt="Description de l'image 2" />
-              <ProjectImage src={projet3} alt="Description de l'image 3" />
-            </div>
+          </section>
+          <div className="flex justify-center mt-8">
+            <ProjectImage src={projet1} alt="Description de l'image 1" />
+            <ProjectImage src={projet2} alt="Description de l'image 2" />
+            <ProjectImage src={projet3} alt="Description de l'image 3" />
           </div>
         </div>
-      </section>
+      </div>
+
       <div className="flex justify-center items-center h-full">
         <div className="max-w-lg w-full"></div>
       </div>
