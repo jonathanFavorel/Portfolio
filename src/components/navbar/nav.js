@@ -7,13 +7,6 @@ import { ReactComponent as ThemeIcon } from "./src/Theme.svg";
 import { ReactComponent as WorkIcon } from "./src/Work.svg";
 
 const VerticalNavbar = () => {
-  const smoothScroll = (targetId) => {
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
@@ -36,13 +29,18 @@ const VerticalNavbar = () => {
         "recommandation",
         "projet",
       ];
+      let found = false;
       sections.forEach((id) => {
         const section = document.getElementById(id);
         const rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top <= window.innerHeight * 0.25) {
+        if (rect.top <= 0 && rect.bottom >= 0 && !found) {
           setActiveIcon(id);
+          found = true;
         }
       });
+      if (!found) {
+        setActiveIcon("home");
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -83,66 +81,56 @@ const VerticalNavbar = () => {
           />
         </div>
         <div className="mb-40 -mt-8">
-          <div
+          <a
+            href="#home"
             className={getIconClass("home")}
-            onClick={() => {
-              smoothScroll("home");
-              setActiveIcon("home");
-            }}
+            onClick={() => setActiveIcon("home")}
           >
             <HomeIcon
               className="h-10 mx-auto mb-8 cursor-pointer"
               fill={iconFillColor}
             />
-          </div>
-          <div
+          </a>
+          <a
+            href="#formation"
             className={getIconClass("formation")}
-            onClick={() => {
-              smoothScroll("formation");
-              setActiveIcon("formation");
-            }}
+            onClick={() => setActiveIcon("formation")}
           >
             <FormationIcon
               className="h-10 mx-auto mb-8 cursor-pointer"
               fill={iconFillColor}
             />
-          </div>
-          <div
+          </a>
+          <a
+            href="#work"
             className={getIconClass("work")}
-            onClick={() => {
-              smoothScroll("work");
-              setActiveIcon("work");
-            }}
+            onClick={() => setActiveIcon("work")}
           >
             <WorkIcon
               className="h-10 mx-auto mb-8 cursor-pointer"
               fill={iconFillColor}
             />
-          </div>
-          <div
+          </a>
+          <a
+            href="#recommandation"
             className={getIconClass("recommandation")}
-            onClick={() => {
-              smoothScroll("recommandation");
-              setActiveIcon("recommandation");
-            }}
+            onClick={() => setActiveIcon("recommandation")}
           >
             <RecommandationIcon
               className="h-10 mx-auto mb-8 cursor-pointer"
               fill={iconFillColor}
             />
-          </div>
-          <div
+          </a>
+          <a
+            href="#projet"
             className={getIconClass("projet")}
-            onClick={() => {
-              smoothScroll("projet");
-              setActiveIcon("projet");
-            }}
+            onClick={() => setActiveIcon("projet")}
           >
             <ProjetIcon
               className="h-10 mx-auto mb-8 cursor-pointer"
               fill={iconFillColor}
             />
-          </div>
+          </a>
         </div>
       </div>
       <div className="pb-4"></div>
