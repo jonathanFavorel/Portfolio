@@ -28,15 +28,16 @@ const Timeline = () => {
       et de travailler efficacement sous pression.`,
     },
     {
-      title: "Développeur Web",
+      title: "Technicien HelpDesk",
       level: "Ecoburotic - Rouvignies",
       date: "Août 2018 - Avril 2020",
-      description: `Chez Ecoburotic, j'ai contribué au développement du site
-      vitrine de l'entreprise en utilisant principalement HTML
-      et CSS, avec une touche de PHP.Cette expérience m'a permis
-      de renforcer mes compétences en développement front-end et
-      d'acquérir une bonne compréhension des bonnes pratiques de
-      conception web.`,
+      description: `En tant que Technicien Help Desk chez ECOBUROTIC, j'ai été
+      chargé de fournir un support technique efficace et de
+      résoudre les problèmes liés à l'impression et aux
+      consommables pour nos utilisateurs particuliers. Mon rôle
+      exigeait une communication claire et empathique avec les
+      utilisateurs, ainsi qu'une expertise technique pour
+      résoudre rapidement les problèmes rencontrés.`,
     },
   ]);
 
