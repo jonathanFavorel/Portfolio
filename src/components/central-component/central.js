@@ -494,7 +494,7 @@ const Central = () => {
                 <td className="w-3/4 p-8">
                   <div className="text-lg font-semibold">
                     <h2 className="text-lg font-inter-medium text-black dark:text-white">
-                      Développeur Web
+                      Technicien HelpDesk
                     </h2>
                     <div className="flex justify-between">
                       <div className="flex justify-between items-center">
@@ -517,12 +517,13 @@ const Central = () => {
                       Ecoburotic - Rouvignies
                     </h3>
                     <p className="text-grey font-inter-regular mt-6 dark:text-white">
-                      Chez Ecoburotic, j'ai contribué au développement du site
-                      vitrine de l'entreprise en utilisant principalement HTML
-                      et CSS, avec une touche de PHP.Cette expérience m'a permis
-                      de renforcer mes compétences en développement front-end et
-                      d'acquérir une bonne compréhension des bonnes pratiques de
-                      conception web.
+                      En tant que Technicien Help Desk chez ECOBUROTIC, j'ai été
+                      chargé de fournir un support technique efficace et de
+                      résoudre les problèmes liés à l'impression et aux
+                      consommables pour nos utilisateurs particuliers. Mon rôle
+                      exigeait une communication claire et empathique avec les
+                      utilisateurs, ainsi qu'une expertise technique pour
+                      résoudre rapidement les problèmes rencontrés.
                     </p>
                   </div>
                 </td>
